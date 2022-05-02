@@ -17,16 +17,17 @@ const {
  *
  */
 function countCats(backyard) {
-  // result is count of  cats
+  // result is count of cats
   let result = 0;
   for (let i = 0; i < backyard; i++) {
     for (let j = 0; j < backyard[i]; j++) {
       if (backyard[i][j] == "^^") {
         cats++
+      } else {
+        return 0
       }
     }
   }
-  console.log(result)
   return result
 }
 
