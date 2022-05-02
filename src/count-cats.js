@@ -1,11 +1,9 @@
-const {
-  NotImplementedError
-} = require('../extensions/index.js');
+const { NotImplementedError } = require("../extensions/index.js");
 
 /**
  * Given matrix where you have to find cats by ears "^^"
  *
- * @param {Array<Array>} matrix 
+ * @param {Array<Array>} matrix
  * @return {Number} count of cats found
  *
  * @example
@@ -19,18 +17,16 @@ const {
 function countCats(backyard) {
   // result is count of cats
   let result = 0;
-  for (let i = 0; i < backyard; i++) {
-    for (let j = 0; j < backyard[i]; j++) {
+  for (let i = 0; i < backyard.length; i++) {
+    for (let j = 0; j < backyard[i].length; j++) {
       if (backyard[i][j] == "^^") {
-        cats++
-      } else {
-        return 0
+        result++;
       }
     }
   }
-  return result
+  return result;
 }
 
 module.exports = {
-  countCats
+  countCats,
 };
